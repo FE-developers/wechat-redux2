@@ -1,0 +1,30 @@
+{
+  "name": "wechat-redux2",
+  "version": "1.0.2",
+  "description": "wechat redux is wechat global state  management. fully support the redux grammar",
+  "main": "./dist/index.js",
+  "directories": {},
+  "miniprogram": "dist",
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c scripts/build.js",
+    "dev": "./node_modules/.bin/rollup -c scripts/dev.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FE-developers/wechat-redux2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FE-developers/wechat-redux2/issues"
+  },
+  "homepage": "https://github.com/FE-developers/wechat-redux2#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.7.6",
+    "rollup": "^1.27.11",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
+}

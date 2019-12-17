@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js","regenerator/index.js"],"names":[],"mappings":";;;;;;;AAAA;;;ACAA;AACA","file":"index.js","sourcesContent":["module.exports = require(\"./regenerator\");","module.exports = require(\"regenerator-runtime\");\n"]}
