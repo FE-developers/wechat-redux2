@@ -2,51 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02a508fe-17cb-426a-ac2b-b9d90765013e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/wechat-redux2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/app.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/miniprogram_npm/@babel/runtime/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/miniprogram_npm/@babel/runtime/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/miniprogram_npm/regenerator-runtime/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/miniprogram_npm/regenerator-runtime/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/pages/index/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/pages/index/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/pages/index/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/pages/index/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/project.config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/sitemap.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/store/actions/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/store/constants/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/store/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/store/reducers/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/store/storage/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/store/storage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/utils/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/base.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/applyMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/combineReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compose.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/createStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runtime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/actionTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/isPlainObject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/warning.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,10 +17,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/store/reducers/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="282">
+                <caret line="108" selection-start-line="108" selection-end-line="108" />
+                <folding>
+                  <element signature="e#456#1066#0" />
+                  <element signature="e#19#109#0" expanded="true" />
+                  <element signature="e#19#109#0" expanded="true" />
+                  <element signature="e#155#201#0" expanded="true" />
+                  <element signature="e#61#107#0" expanded="true" />
+                  <element signature="e#296#340#0" expanded="true" />
+                  <element signature="e#23#92#0" expanded="true" />
+                  <element signature="e#270#918#0" />
+                </folding>
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -75,80 +45,6 @@
               <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/build.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/dev.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/storage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#32#72#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="118">
-                <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
-                <folding>
-                  <element signature="e#507#541#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/applyMiddleware.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -173,7 +69,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/storage.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/example/package.json" />
         <option value="$PROJECT_DIR$/example/node_modules/@babel/runtime/index.js" />
         <option value="$PROJECT_DIR$/index.js" />
@@ -187,6 +82,7 @@
         <option value="$PROJECT_DIR$/scripts/dev.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/storage.js" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
@@ -207,16 +103,6 @@
             <path>
               <item name="wechat-redux2" type="b2602c69:ProjectViewProjectNode" />
               <item name="wechat-redux2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wechat-redux2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wechat-redux2" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wechat-redux2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wechat-redux2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -264,12 +150,27 @@
       <updated>1573477673769</updated>
       <workItem from="1573477675634" duration="4018000" />
       <workItem from="1573570024844" duration="1182000" />
-      <workItem from="1576596639053" duration="1258000" />
+      <workItem from="1576596639053" duration="2070000" />
     </task>
+    <task id="LOCAL-00001" summary="发布 1.0.2 微信版">
+      <created>1576598130353</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576598130353</updated>
+    </task>
+    <task id="LOCAL-00002" summary="发布 1.0.3 微信版">
+      <created>1576598649988</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576598649988</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6458000" />
+    <option name="totallyTimeSpent" value="7270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -296,6 +197,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="发布 1.0.2 微信版" />
+    <MESSAGE value="发布 1.0.3 微信版" />
+    <option name="LAST_COMMIT_MESSAGE" value="发布 1.0.3 微信版" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/LICENSE">
@@ -459,19 +365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="118">
-            <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
-            <folding>
-              <element signature="e#507#541#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/build.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -506,6 +399,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="282">
+            <caret line="108" selection-start-line="108" selection-end-line="108" />
+            <folding>
+              <element signature="e#456#1066#0" />
+              <element signature="e#19#109#0" expanded="true" />
+              <element signature="e#19#109#0" expanded="true" />
+              <element signature="e#155#201#0" expanded="true" />
+              <element signature="e#61#107#0" expanded="true" />
+              <element signature="e#296#340#0" expanded="true" />
+              <element signature="e#23#92#0" expanded="true" />
+              <element signature="e#270#918#0" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

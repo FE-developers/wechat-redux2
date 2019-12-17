@@ -1,10 +1,11 @@
 {
   "name": "wechat-redux2",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "wechat redux is wechat global state  management. fully support the redux grammar",
   "main": "./dist/index.js",
   "directories": {},
   "miniprogram": "dist",
+  "files": ["package.json","dist"],
   "scripts": {
     "build": "./node_modules/.bin/rollup -c scripts/build.js",
     "dev": "./node_modules/.bin/rollup -c scripts/dev.js --watch"
