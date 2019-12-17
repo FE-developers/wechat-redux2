@@ -24,20 +24,17 @@ initLocalStorage(store);
 
 ### store.js
 ```javascript
-import {createStore, applyMiddleware, compose,createLocalStorage} from 'app-redux';
+/***
+ * 这里修改状态
+ */
 
-// 开启本地缓存策略，不需要可以去除
-import {createLocalStorage} from 'app-redux/storage';
+import { createStore, applyMiddleware, compose, createLocalStorage } from 'wechat-redux2';
 
-import thunkMiddleware from 'redux-thunk'
-import rootReducer from './reducers'
-import {createLogger} from 'redux-logger'
-import {SET_NUM,SET_LOCAL_NUM} from '../constants/test';
-
-// 需要缓存的操作名
-const actions = [
-  SET_LOCAL_NUM
-];
+import thunkMiddleware from 'redux-thunk';
+// redux 怎么配置就怎么配置就完事
+import rootReducer from './reducers/index.js';
+import { createLogger } from 'redux-logger';
+import actions from './storage/index.js';
 
 const middlewares = [
   thunkMiddleware,
@@ -52,77 +49,135 @@ const enhancer = compose(
 
 export default function configStore() {
   const store = createStore(rootReducer, enhancer);
-  
   return store;
 }
+
 ```
 
-### app.ux
+### app.js
 ```html
 <script>
-  const injectRef = Object.getPrototypeOf(global) || global;
-  injectRef.regeneratorRuntime = require('@babel/runtime/regenerator');
-  import {initLocalStorage} from 'wechat-redux2/storage'
-  import configStore from './store'
-  const store = configStore()
+/**
+ * framework app 应用引擎
+ * 改造微信小程序生命周期,保证执行顺序
+ */
+import app from './packages/framework/app.js';
+import router from './packages/router/index.js';
+import regeneratorRuntime from './packages/framework/runtime.js';
+import configStore from './store/index.js';
+const store = configStore();
+import { initStorage } from 'wechat-redux2';
+import request from './packages/request/index.js';
+import {getUserInfo} from './store/actions/user.js';
+import rules from './rules';
+
+app({
+  store,
+  // 这个生命周期经过改造之后已经可以在进入页面前做完所有操作了
+  onCreate: async function (page) {
+    
+    await initStorage(store);
+
+    const { user } = store.getState();
+
+    // token
+    if (user.token) request.bind({
+      header: {
+        token: user.token
+      }
+    });
+
+    await store.dispatch(getUserInfo());
+
+  }
+})
+</script>
+```
+
+### 页面模版使用与data保持一致，所有redux操作都会与视图的data对象做双向绑定 connect 请看示例
+```javascript
+// pages/user/index.js
+import regeneratorRuntime from '../../packages/framework/runtime.js';
+import { connect } from 'wechat-redux2';
+
+const store = connect(
+  ({user}) => ({
+    user: user.info
+  }),
+  dispatch: () => ({})
+);
+
+const config = {
 
   /**
-   * 应用级别的配置，供所有页面公用
-   * 如果需要缓存配置，请执行完善缓存逻辑
+   * 页面的初始数据
    */
-  export default {
-    async onCreate() {
-      // 初始化本地数据
-      await initLocalStorage(store)
-    }
+  data: {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+    setTimeout(() => {
+
+      console.log(this.data.user,123);
+    },2000);
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
-</script>
-```
+};
 
-### page
-```html
-<template>
-    <div class='index'>
-        <div class='group'>
-            <text class='add' @click='addNum'>测试 num +</text>
-            <text>{{num}}</text>
-            <text class='reduce' @click='reduceNum'>测试 num -</text>
-        </div>
-        <div class='group'>
-            <text class='add' @click='addLocalNum'>测试 local_num +</text>
-            <text>{{local_num}}</text>
-            <text class='reduce' @click='reduceLocalNum'>测试 local_num -</text>
-        </div>
-    </div>
-</template>
-<script>
-import {connect} from 'app-redux';
-import {setNum,setLocalNum} from '../../store/actions/test.js';
-
-const store = connect(({test:{num,local_num}}) => ({
-    num,
-    local_num
-}),dispatch => ({
-    addNum(){
-        return dispatch(setNum(this.num + 1))
-    },
-    reduceNum(){
-        return dispatch(setNum(this.num - 1))
-    },
-    addLocalNum(){
-        return dispatch(setLocalNum(this.local_num + 1))
-    },
-    reduceLocalNum(){
-        return dispatch(setLocalNum(this.local_num - 1))
-    }
-}));
-
-export default store({
-    onInit() {
-        
-    }
-});
-</script>
+Page(store(config));
 
 ```
 
