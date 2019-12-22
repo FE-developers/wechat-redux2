@@ -72,6 +72,8 @@ export default function connect(mapState, mapDispatch) {
     conf.data = Object.assign(conf.data, state || {});
     
     const _onLoad = conf.onLoad;
+    const _onShow = conf.onShow;
+
     conf.onLoad = function(){
       // dispacth 订阅
       store.subscribe(() => {
@@ -80,6 +82,13 @@ export default function connect(mapState, mapDispatch) {
       sub.call(this, mapState);
       return _onLoad && _onLoad.call(this, ...arguments);
     };
+
+    // 发生onShow同步状态
+    conf.onShow = function(){
+      sub.call(this, mapState);
+      return _onShow && _onShow.call(this, ...arguments);
+    };
+
     return conf;
   }
 }
