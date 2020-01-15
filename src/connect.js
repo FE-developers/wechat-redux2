@@ -49,15 +49,15 @@ export default function connect(mapState, mapDispatch) {
      * 出现组件核心关键字
      * 认为当前是组件接口
      */
-    if (
-      (conf.methods instanceof Object) ||
-      (conf.properties instanceof Function) ||
-      (conf.attached instanceof Function) ||
-      (conf.ready instanceof Function) ||
-      (conf.moved instanceof Function) ||
-      (conf.detached instanceof Function)
-    ){
-      conf.methods = Object.keys(methods).forEach(item => {
+    const isComponent = (conf.methods instanceof Object) ||
+        (conf.properties instanceof Function) ||
+        (conf.attached instanceof Function) ||
+        (conf.ready instanceof Function) ||
+        (conf.moved instanceof Function) ||
+        (conf.detached instanceof Function);
+
+    if (isComponent){
+      Object.keys(methods).forEach(item => {
         if (!conf.methods) conf.methods = {};
         conf.methods[item] = methods[item];
       });
@@ -68,27 +68,34 @@ export default function connect(mapState, mapDispatch) {
     }
 
     if (!conf.data) conf.data = {};
-    
     conf.data = Object.assign(conf.data, state || {});
-    
-    const _onLoad = conf.onLoad;
-    const _onShow = conf.onShow;
 
-    conf.onLoad = function(){
-      // dispacth 订阅
-      store.subscribe(() => {
-        Promise.resolve().then(() => sub.call(this, mapState));
-      });
-      sub.call(this, mapState);
-      return _onLoad && _onLoad.call(this, ...arguments);
-    };
-
-    // 发生onShow同步状态
-    conf.onShow = function(){
-      sub.call(this, mapState);
-      return _onShow && _onShow.call(this, ...arguments);
-    };
-
+    if(isComponent){
+      const _attached = conf.attached;
+      conf.attached = function(){// dispacth 订阅
+        store.subscribe(() => {
+          Promise.resolve().then(() => sub.call(this, mapState));
+        });
+        sub.call(this, mapState);
+        return _attached && _attached.call(this,...arguments);
+      }
+    } else {
+      const _onLoad = conf.onLoad;
+      const _onShow = conf.onShow;
+      conf.onLoad = function(){
+        // dispacth 订阅
+        store.subscribe(() => {
+          Promise.resolve().then(() => sub.call(this, mapState));
+        });
+        sub.call(this, mapState);
+        return _onLoad && _onLoad.call(this, ...arguments);
+      };
+      // 发生onShow同步状态
+      conf.onShow = function(){
+        sub.call(this, mapState);
+        return _onShow && _onShow.call(this, ...arguments);
+      };
+    }
     return conf;
   }
 }

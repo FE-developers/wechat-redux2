@@ -1,6 +1,6 @@
 {
   "name": "wechat-redux2",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "wechat redux is wechat global state  management. fully support the redux grammar",
   "main": "./dist/index.js",
   "directories": {},
